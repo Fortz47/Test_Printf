@@ -9,12 +9,12 @@ int (*check_specifier(const char ch))(va_list)
 
 	func_t f[] = {
 		{"c", print_ch},{"s", print_str},
-		{"d", print_dec},{"i", print_dec},
-		{"b", print_bin},{"u", print_u},
-		{"o", print_o},{"x", print_x},
-		{"x", print_X},{"S", print_S},
-		{"p", print_p},{"R", print_R},
-		{NULL, NULL}
+		{"%", print_cent},{"d", print_dec},
+		{"i", print_dec},{"b", print_bin},
+		{"u", print_u},{"o", print_o},
+		{"x", print_x},{"x", print_X},
+		{"S", print_S},{"p", print_p},
+		{"R", print_R},{NULL, NULL}
 	};
 
 		i = 0;

@@ -5,23 +5,20 @@
 
 int _printf(const char *format, ...)
 {
+	int i, count;
 	int (*f)(va_list);
 	va_list args;
 	va_start(args, format);
 
-	int i = 0;
-	int count = 0;
+	i = 0;
+	count = 0;
 
 	while(format[i] != '\0')
 	{
-		if (format[i] == '%' && format[i + 1] != '%')
+		if (format[i] == '%')
 		{
-			f = check_specifier(format[i++]);
+			f = check_specifier(format[i + 1]);
 			count += f(args);
-		}
-		else if (format[i + 1] == '%')
-		{
-			count += _putchar('%');
 			i++;
 		}
 		else

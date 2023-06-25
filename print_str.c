@@ -9,24 +9,12 @@ int print_str(va_list args)
 	char *str = va_arg(args, char *);
 
 	if (str == NULL)
-	{
 		str = "(nil)";
-		while (*str != '\0')
-		{
-			_putchar(*str);
-			*str++;
-			count++;
-		}
-		return (count);
-	}
-	else
+	while (*str != '\0')
 	{
-		while (*str)
-		{
-			_putchar(*str);
-			*str++;
-			count++;
-		}
+		count += _putchar(*str);
+		*str++;
 	}
+
 	return (count);
 }

@@ -19,6 +19,7 @@ int _printf(const char *format, ...);
 int (*check_specifier(const char))(va_list);
 int print_ch(va_list);
 int print_str(va_list);
+int print_cent(va_list);
 int print_dec(va_list);
 int print_bin(va_list);
 int print_u(va_list);
