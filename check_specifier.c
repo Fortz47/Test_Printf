@@ -3,26 +3,29 @@
 /**
  */
 
-int (*check_specifier(const char ch))(va_list)
+int (*check_specifier(const char *ch))(va_list)
 {
 	int i;
 
-	func_t f[] = {
-		{"c", print_ch},{"s", print_str},
-		{"%", print_cent},{"d", print_dec},
-		{"i", print_dec},{"b", print_bin},
-		{"u", print_u},{"o", print_o},
-		{"x", print_x},{"x", print_X},
-		{"S", print_S},{"p", print_p},
-		{"R", print_R},{NULL, NULL}
+	func_t conv[] = {
+		{"c", print_ch},
+		{"s", print_str},
+		{"%", print_cent},
+		{"d", print_dec},
+		{"i", print_dec},
+		{"b", print_bin},
+		{"u", print_unsigned_int},
+		{"o", print_octal},
+		{"x", print_hex_lower},
+		{"X", print_hex_upper},
+		{"S", print_S},
+		{NULL, NULL}
 	};
 
-		i = 0;
-		while (f[i].ch != NULL)
+		for (i = 0; conv[i].ch; i++)
 		{
-			if (ch == *(f[i].ch))
-				return (f[i].f);
-			i++;
+			if (*ch == *(conv[i].ch))
+				return (conv[i].f);
 		}
 	return (NULL);
 }

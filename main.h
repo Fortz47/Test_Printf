@@ -16,19 +16,19 @@ typedef struct func
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int (*check_specifier(const char))(va_list);
-int print_ch(va_list);
-int print_str(va_list);
-int print_cent(va_list);
-int print_dec(va_list);
-int print_bin(va_list);
-int print_u(va_list);
-int print_o(va_list);
-int print_x(va_list);
-int print_X(va_list);
-int print_S(va_list);
-int print_p(va_list);
-int print_R(va_list);
+int (*check_specifier(const char *))(va_list);
+int print_ch(va_list args);
+int print_str(va_list args);
+int print_cent(va_list args);
+int print_dec(va_list args);
+int print_bin(va_list args);
+int print_unsigned_int(va_list args);
+int print_octal(va_list args);
+int print_hex_lower(va_list args);
+int print_hex_upper(va_list args);
+int print_S(va_list args);
+int print_p(va_list args);
+int print_R(va_list args);
 
 
 #endif

@@ -6,25 +6,30 @@
 int _printf(const char *format, ...)
 {
 	int i, count;
-	int (*f)(va_list);
-	va_list args;
-	va_start(args, format);
+	int (*func)(va_list);
+	va_list arg;
+
+
+	va_start(arg, format);
 
 	i = 0;
 	count = 0;
 
-	while(format[i] != '\0')
+	while(format[i])
 	{
 		if (format[i] == '%')
 		{
-			f = check_specifier(format[i + 1]);
-			count += f(args);
-			i++;
+			func = check_specifier(&format[i + 1]);
+			if (func != NULL)
+			{
+				count += func(arg);
+				i++;
+			}
 		}
 		else
 			count += _putchar(format[i]);
 		i++;
 	}
-	va_end(args);
+	va_end(arg);
 	return (count);
 }
