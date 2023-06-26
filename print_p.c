@@ -2,6 +2,10 @@
 #include <stdint.h>
 
 /**
+ * print_p - prints an address
+ * @args: argument list
+ *
+ * Return: number of argument printed
  */
 
 int print_p(va_list args)

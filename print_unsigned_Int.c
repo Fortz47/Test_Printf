@@ -1,6 +1,11 @@
 #include "main.h"
 
 /**
+ * print_num_unDec - print unsigned int
+ * @n: unsigned int
+ * @count: count
+ *
+ * Return: number of characters printed
  */
 
 int print_num_unDec(unsigned int n, int count)
@@ -12,6 +17,10 @@ int print_num_unDec(unsigned int n, int count)
 }
 
 /**
+ * print_unsigned_int - print unsigned int
+ * @args: argument list
+ *
+ * Return: number of characters printed
  */
 
 int print_unsigned_int(va_list args)

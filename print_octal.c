@@ -1,6 +1,11 @@
 #include "main.h"
 
 /**
+ * print_num_oct - print a number in oct
+ * @n: number
+ * @count: count
+ *
+ * Return: number of character printed
  */
 
 int print_num_oct(unsigned int n, int count)
@@ -17,6 +22,10 @@ int print_num_oct(unsigned int n, int count)
 }
 
 /**
+ * print_octal - print a number in oct
+ * @args: argument list
+ *
+ * Return: number of argument printed
  */
 
 int print_octal(va_list args)

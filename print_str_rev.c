@@ -1,6 +1,10 @@
 #include "main.h"
 
 /**
+ * print_str_rev - prints string in reverse
+ * @args: argument list
+ *
+ * Return: number of argument printed
  */
 
 int print_str_rev(va_list args)

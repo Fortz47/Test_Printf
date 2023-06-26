@@ -1,6 +1,10 @@
 #include "main.h"
 
 /**
+ * print_str - prints a string
+ * @args: argument list
+ *
+ * Return: number of argument printed
  */
 
 int print_str(va_list args)
