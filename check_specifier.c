@@ -20,6 +20,8 @@ int (*check_specifier(const char *ch))(va_list)
 		{"X", print_hex_upper},
 		{"S", print_S},
 		{"p", print_p},
+		{"r", print_str_rev},
+		{"R", print_rot13},
 		{NULL, NULL}
 	};
 
