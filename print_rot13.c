@@ -23,7 +23,7 @@ int print_r13(char c)
  * Return: no of characters printed
  */
 
-int print_rot13(va_list args)
+int print_rot13(va_list args, flag *f __attribute__((unused)))
 {
 	char c, rotated;
 

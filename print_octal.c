@@ -28,13 +28,17 @@ int print_num_oct(unsigned int n, int count)
  * Return: number of argument printed
  */
 
-int print_octal(va_list args)
+int print_octal(va_list args, flag *f)
 {
-	int count;
+	int count = 0;
 
 	unsigned int n = va_arg(args, unsigned int);
 
-	count = print_num_oct(n, 0);
+	if (f->flag3)
+		{
+			count += _putchar('0');
+		}
+	count += print_num_oct(n, 0);
 	return (count);
 }
 

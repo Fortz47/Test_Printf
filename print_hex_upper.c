@@ -7,7 +7,7 @@
  * Return: number of characters printed
  */
 
-int print_hex_upper(va_list args)
+int print_hex_upper(va_list args, flag *f __attribute__((unused)))
 {
 	int digits[32];
 	char hexChar;
@@ -30,6 +30,11 @@ int print_hex_upper(va_list args)
 		n /= 16;
 	}
 	count = 0;
+	if (f->flag3)
+		{
+			count += _putchar('0');
+			count += _putchar('X');
+		}
 	for (j = i - 1; j >= 0; j--)
 	{
 		hexDigit = digits[j];
