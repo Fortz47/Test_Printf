@@ -9,5 +9,5 @@
 
 int print_cent(va_list args __attribute__((unused)), flag *f __attribute__((unused)))
 {
-	return (_putchar('%'));
+	return (write(1, "%", 1));
 }
