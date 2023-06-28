@@ -15,7 +15,6 @@ typedef struct flags
 	int flag1;
 	int flag2;
 	int flag3;
-	int flag4;
 } flag;
 
 /**
