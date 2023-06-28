@@ -1,6 +1,10 @@
 #include "main.h"
 
 /**
+ * is_flag_ch - check format flag
+ * @c: character to check
+ *
+ * Return: true or false
  */
 
 bool is_flag_ch(char c)
@@ -9,6 +13,11 @@ bool is_flag_ch(char c)
 }
 
 /**
+ * process_flags - process format flag
+ * @format: format string
+ * @index: index of string
+ *
+ * Return: struct type flag
  */
 
 flag *process_flags(const char *format, int index)
@@ -19,7 +28,6 @@ flag *process_flags(const char *format, int index)
 	f->flag1 = 0;
 	f->flag2 = 0;
 	f->flag3 = 0;
-	f->flag4 = 0;
 	while (is_flag_ch(format[index]))
 	{
 		switch (format[index])
@@ -32,9 +40,6 @@ flag *process_flags(const char *format, int index)
 				break;
 			case '#':
 				f->flag3 = 1;
-				break;
-			case '0':
-				f->flag4 = 1;
 				break;
 		}
 		index++;
