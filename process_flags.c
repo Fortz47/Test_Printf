@@ -19,7 +19,6 @@ flag *process_flags(const char *format, int index)
 	f->flag1 = 0;
 	f->flag2 = 0;
 	f->flag3 = 0;
-	f->flag4 = 0;
 	while (is_flag_ch(format[index]))
 	{
 		switch (format[index])
