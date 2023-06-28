@@ -33,9 +33,6 @@ flag *process_flags(const char *format, int index)
 			case '#':
 				f->flag3 = 1;
 				break;
-			case '0':
-				f->flag4 = 1;
-				break;
 		}
 		index++;
 	}
